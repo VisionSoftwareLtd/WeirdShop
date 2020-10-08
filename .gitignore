@@ -2,3 +2,8 @@
 .idea/
 
 target/
+
+# VS Code
+.classpath
+.settings
+.project

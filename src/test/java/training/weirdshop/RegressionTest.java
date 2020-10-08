@@ -3,6 +3,7 @@ package training.weirdshop;
 import org.junit.Test;
 import java.util.Scanner;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.assertEquals;
 
 public class RegressionTest {
     @Test
@@ -27,6 +28,7 @@ public class RegressionTest {
         String output = sb.toString();
 
         String expected =  new Scanner(getClass().getResourceAsStream("/expected-output.txt"), "UTF-8").useDelimiter("\\A").next();
+        expected = expected.replace("\r\n", "\n");
 
         assertThat(output).isEqualTo(expected);
     }
